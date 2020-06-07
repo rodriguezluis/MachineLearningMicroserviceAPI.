@@ -1,0 +1,19 @@
+MAIN TERMINAL
+$ sh run_kubernetes.sh
+NAME                   READY   STATUS    RESTARTS   AGE
+pro4                   1/1     Running   0          40s
+pro4-c9d964856-57cw2   1/1     Running   0          47s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+SEPARATE TERMINAL
+$ sh make_prediction.sh
+Port: 8000
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   260  100    48  100   212   1090   4818 --:--:-- --:--:-- --:--:--  5909{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
